@@ -1,0 +1,290 @@
+{
+  "notAuthorized": {
+    "en": "Not authorized to access this route",
+    "ar": "غير مصرح له بالوصول إلى هذا المسار"
+  },
+  "tokenExpired": {
+    "en": "Token expired",
+    "ar": "انتهت صلاحية الرمز المميز"
+  },
+  "invalidToken": {
+    "en": "Invalid token",
+    "ar": "رمز مميز غير صالح"
+  },
+  "unauthorizedRole": {
+    "en": "Unauthorized: User role '{{role}}' does not have access to this route",
+    "ar": "غير مصرح به: دور المستخدم '{{role}}' ليس لديه الوصول إلى هذا المسار"
+  },
+  "serverError": {
+    "en": "Server error",
+    "ar": "خطأ في الخادم"
+  },
+  "nameIsRequired": {
+    "en": "Name is required",
+    "ar": "الاسم مطلوب"
+  },
+  "nameLengthError": {
+    "en": "Name must be at least 3 characters long",
+    "ar": "يجب أن يكون الاسم على الأقل 3 أحرف"
+  },
+  "emailIsRequired": {
+    "en": "Email required",
+    "ar": "البريد الإلكتروني مطلوب"
+  },
+  "invalidEmail": {
+    "en": "Invalid email address",
+    "ar": "عنوان البريد الإلكتروني غير صالح"
+  },
+  "passwordIsRequired": {
+    "en": "Password required",
+    "ar": "كلمة المرور مطلوبة"
+  },
+  "passwordLengthError": {
+    "en": "Password must be at least 6 characters long",
+    "ar": "يجب أن تتكون كلمة المرور من 6 أحرف على الأقل"
+  },
+  "invalidPasswordConfirmation": {
+    "en": "Invalid password confirmation",
+    "ar": "تأكيد كلمة المرور غير صالح"
+  },
+  "passwordConfirmationIsRequired": {
+    "en": "Password confirmation required",
+    "ar": "تأكيد كلمة المرور مطلوب"
+  },
+  "adminCreated": {
+    "en": "New admin created successfully.",
+    "ar": "تم إنشاء مسؤول جديد بنجاح."
+  },
+  "teacherCreated": {
+    "en": "New teacher created successfully.",
+    "ar": "تم إنشاء معلم جديد بنجاح."
+  },
+  "adminLoggedIn": {
+    "en": "Admin logged in successfully.",
+    "ar": "تم تسجيل دخول المسؤول بنجاح."
+  },
+  "profileOpened": {
+    "en": "Profile page opened.",
+    "ar": "تم فتح صفحة الملف الشخصي."
+  },
+  "adminAlreadyExists": {
+    "en": "Admin already exists.",
+    "ar": "المسؤول موجود بالفعل."
+  },
+  "adminNotFound": {
+    "en": "Admin not found",
+    "ar": "المسؤول غير موجود"
+  },
+  "invalidPassword": {
+    "en": "Invalid password",
+    "ar": "كلمة المرور غير صحيحة"
+  },
+  "passwordResetSuccess": {
+    "en": "Password reset successful",
+    "ar": "تم إعادة تعيين كلمة المرور بنجاح"
+  },
+  "adminsRetrievedSuccessfully": {
+    "en": "Admins retrieved successfully",
+    "ar": "تم استرداد المسؤولين بنجاح"
+  },
+  "profileUpdateSuccess": {
+    "en": "Profile updated successfully",
+    "ar": "تم تحديث الملف الشخصي بنجاح"
+  },
+  "adminEmailExists": {
+    "en": "Admin with the provided email already exists",
+    "ar": "المسؤول بالبريد الإلكتروني المقدم موجود بالفعل"
+  },
+  "currentPasswordRequired": {
+    "en": "You must enter your current password",
+    "ar": "يجب إدخال كلمة المرور الحالية"
+  },
+  "passwordConfirmRequired": {
+    "en": "You must enter the password confirmation",
+    "ar": "يجب إدخال تأكيد كلمة المرور"
+  },
+  "passwordRequired": {
+    "en": "You must enter your password",
+    "ar": "يجب إدخال كلمة المرور"
+  },
+  "incorrectCurrentPassword": {
+    "en": "Incorrect current password",
+    "ar": "كلمة المرور الحالية غير صحيحة"
+  },
+  "passwordConfirmationIncorrect": {
+    "en": "Password confirmation is incorrect",
+    "ar": "تأكيد كلمة المرور غير صحيح"
+  },
+  "passwordUpdated": {
+    "en": "Password updated successfully",
+    "ar": "تم تحديث كلمة المرور بنجاح"
+  },
+  "academicYearCreated": {
+    "en": "Academic year created successfully",
+    "ar": "تم إنشاء السنة الأكاديمية بنجاح"
+  },
+  "academicYearExists": {
+    "en": "Academic year already exists",
+    "ar": "السنة الأكاديمية موجودة بالفعل"
+  },
+  "academicYearsFetched": {
+    "en": "All academic years fetched successfully",
+    "ar": "تم استرداد جميع السنوات الأكاديمية بنجاح"
+  },
+  "academicYearNotFound": {
+    "en": "Academic year not found",
+    "ar": "السنة الأكاديمية غير موجودة"
+  },
+  "academicYearFetched": {
+    "en": "Academic year fetched successfully",
+    "ar": "تم استرداد السنة الأكاديمية بنجاح"
+  },
+  "academicYearUpdated": {
+    "en": "Academic year updated successfully",
+    "ar": "تم تحديث السنة الأكاديمية بنجاح"
+  },
+  "academicYearDeleted": {
+    "en": "Academic year deleted successfully",
+    "ar": "تم حذف السنة الأكاديمية بنجاح"
+  },
+  "academicTermExists": {
+    "en": "Academic term already exists",
+    "ar": "الفصل الأكاديمي موجود بالفعل"
+  },
+  "academicTermCreated": {
+    "en": "Academic year created successfully",
+    "ar": "تم إنشاء الفصل الاكاديمي بنجاح"
+  },
+  "academicTermsFetched": {
+    "en": "All academic terms fetched successfully",
+    "ar": "تم استرداد جميع فصول الأكاديمية بنجاح"
+  },
+  "academicTermNotFound": {
+    "en": "Academic term not found",
+    "ar": "الفصل الاكاديمي غير موجود"
+  },
+  "academicTermFetched": {
+    "en": "Academic term fetched successfully",
+    "ar": "تم استرداد الفصل الاكاديمي بنجاح"
+  },
+  "academicTermUpdated": {
+    "en": "Academic term updated successfully",
+    "ar": "تم تحديث الفصل الاكاديمي بنجاح"
+  },
+  "academicTermDeleted": {
+    "en": "Academic term deleted successfully",
+    "ar": "تم حذف الفصل الاكاديمي بنجاح"
+  },
+  "classLevelExists": {
+    "en": "Class level already exists",
+    "ar": "مستوى الصف موجود بالفعل"
+  },
+  "classLevelCreated": {
+    "en": "Class level created successfully",
+    "ar": "تم إنشاء مستوى الصف بنجاح"
+  },
+  "classLevelsFetched": {
+    "en": "All class levels fetched successfully",
+    "ar": "تم استرداد جميع مستويات الصف بنجاح"
+  },
+  "classLevelNotFound": {
+    "en": "Class level not found",
+    "ar": "مستوى الصف غير موجود"
+  },
+  "classLevelFetched": {
+    "en": "Class level fetched successfully",
+    "ar": "تم استرداد مستوى الصف بنجاح"
+  },
+  "classLevelUpdated": {
+    "en": "Class level updated successfully",
+    "ar": "تم تحديث مستوى الصف بنجاح"
+  },
+  "classLevelDeleted": {
+    "en": "Class level deleted successfully",
+    "ar": "تم حذف مستوى الصف بنجاح"
+  },
+  "programExists": {
+    "en": "Program already exists",
+    "ar": "البرنامج موجود بالفعل"
+  },
+  "programCreated": {
+    "en": "Program created successfully",
+    "ar": "تم إنشاء البرنامج بنجاح"
+  },
+  "programsFetched": {
+    "en": "All programs fetched successfully",
+    "ar": "تم استرداد جميع البرامج بنجاح"
+  },
+  "programNotFound": {
+    "en": "Program not found",
+    "ar": "البرنامج غير موجود"
+  },
+  "programFetched": {
+    "en": "Program fetched successfully",
+    "ar": "تم استرداد البرنامج بنجاح"
+  },
+  "programUpdated": {
+    "en": "Program updated successfully",
+    "ar": "تم تحديث البرنامج بنجاح"
+  },
+  "programDeleted": {
+    "en": "Program deleted successfully",
+    "ar": "تم حذف البرنامج بنجاح"
+  },
+  "subjectExists": {
+    "en": "Subject already exists",
+    "ar": "المادة موجودة بالفعل"
+  },
+  "subjectCreated": {
+    "en": "Subject created successfully",
+    "ar": "تم إنشاء المادة بنجاح"
+  },
+  "subjectsFetched": {
+    "en": "All subjects fetched successfully",
+    "ar": "تم استرداد جميع المواد بنجاح"
+  },
+  "subjectNotFound": {
+    "en": "Subject not found",
+    "ar": "المادة غير موجودة"
+  },
+  "subjectFetched": {
+    "en": "Subject fetched successfully",
+    "ar": "تم استرداد المادة بنجاح"
+  },
+  "subjectUpdated": {
+    "en": "Subject updated successfully",
+    "ar": "تم تحديث المادة بنجاح"
+  },
+  "subjectDeleted": {
+    "en": "Subject deleted successfully",
+    "ar": "تم حذف المادة بنجاح"
+  },
+  "yearGroupExists": {
+    "en": "Year group already exists",
+    "ar": "مجموعة السنة الدراسية موجودة بالفعل"
+  },
+  "yearGroupCreated": {
+    "en": "Year group created successfully",
+    "ar": "تم إنشاء مجموعة السنة الدراسية بنجاح"
+  },
+  "yearGroupsFetched": {
+    "en": "All year groups fetched successfully",
+    "ar": "تم استرداد جميع مجموعات السنة الدراسية بنجاح"
+  },
+  "yearGroupNotFound": {
+    "en": "Year group not found",
+    "ar": "مجموعة السنة الدراسية غير موجودة"
+  },
+  "yearGroupFetched": {
+    "en": "Year group fetched successfully",
+    "ar": "تم استرداد مجموعة السنة الدراسية بنجاح"
+  },
+  "yearGroupUpdated": {
+    "en": "Year group updated successfully",
+    "ar": "تم تحديث مجموعة السنة الدراسية بنجاح"
+  },
+  "yearGroupDeleted": {
+    "en": "Year group deleted successfully",
+    "ar": "تم حذف مجموعة السنة الدراسية بنجاح"
+  }
+}
