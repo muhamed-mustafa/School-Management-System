@@ -5,6 +5,7 @@ import { ClassLevelRoutes } from '@academic/class-level/ClassLevelRoutes.js';
 import { ProgramRoutes } from '@academic/program/ProgramRoutes.js';
 import { SubjectRoutes } from '@academic/subjects/SubjectRoutes.js';
 import { YearGroupRoutes } from '@academic/year-group/YearGroupRoutes.js';
+import { TeacherRoutes } from '@staff/teacher/TeacherRoutes.js';
 
 class RouteManager {
   constructor(app) {
@@ -16,6 +17,7 @@ class RouteManager {
     this.programRoutes = new ProgramRoutes();
     this.subjectRoutes = new SubjectRoutes();
     this.yearGroupRoutes = new YearGroupRoutes();
+    this.teacherRoutes = new TeacherRoutes();
   }
 
   mountRoutes() {
@@ -26,6 +28,7 @@ class RouteManager {
     this.app.use('/api/v1/program', this.programRoutes.router);
     this.app.use('/api/v1/subject', this.subjectRoutes.router);
     this.app.use('/api/v1/year-group', this.yearGroupRoutes.router);
+    this.app.use('/api/v1/teacher', this.teacherRoutes.router);
   }
 }
 

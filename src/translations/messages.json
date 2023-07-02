@@ -63,6 +63,10 @@
     "en": "Admin logged in successfully.",
     "ar": "تم تسجيل دخول المسؤول بنجاح."
   },
+  "teacherLoggedIn": {
+    "en": "Teacher logged in successfully.",
+    "ar": "تم تسجيل دخول المعلم بنجاح."
+  },
   "profileOpened": {
     "en": "Profile page opened.",
     "ar": "تم فتح صفحة الملف الشخصي."
@@ -87,6 +91,14 @@
     "en": "Admins retrieved successfully",
     "ar": "تم استرداد المسؤولين بنجاح"
   },
+  "teachersRetrievedSuccessfully": {
+    "en": "Teachers retrieved successfully",
+    "ar": "تم استرداد المعلمين بنجاح"
+  },
+  "teacherRetrievedSuccessfully": {
+    "en": "Teacher retrieved successfully",
+    "ar": "تم استرداد المعلم بنجاح"
+  },
   "profileUpdateSuccess": {
     "en": "Profile updated successfully",
     "ar": "تم تحديث الملف الشخصي بنجاح"
@@ -94,6 +106,22 @@
   "adminEmailExists": {
     "en": "Admin with the provided email already exists",
     "ar": "المسؤول بالبريد الإلكتروني المقدم موجود بالفعل"
+  },
+  "teacherAlreadyExists": {
+    "en": "Teacher already exists.",
+    "ar": "المعلم موجود بالفعل."
+  },
+  "teacherNotFound": {
+    "en": "Teacher not found",
+    "ar": "المعلم غير موجود"
+  },
+  "teacherIsWithdrawn": {
+    "en": "Action denied, teacher is withdraw",
+    "ar": "حسابك موقوف"
+  },
+  "teacherEmailExists": {
+    "en": "Teacher with the provided email already exists",
+    "ar": "المعلم بالبريد الإلكتروني المقدم موجود بالفعل"
   },
   "currentPasswordRequired": {
     "en": "You must enter your current password",

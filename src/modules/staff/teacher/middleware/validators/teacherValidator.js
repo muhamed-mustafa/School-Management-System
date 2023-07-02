@@ -1,10 +1,10 @@
 import { check } from 'express-validator';
-import { AdminModel } from '@staff/admin/AdminModel.js';
+import { TeacherModel } from '@staff/teacher/TeacherModel.js';
 import { handleValidationErrors } from '@root/middlewares/validator.js';
 import { ErrorResponse } from '@root/utils/errorResponse.js';
 import i18n from 'i18n';
 
-class AdminValidator {
+class TeacherValidator {
   static getValidationChain(fn) {
     return [fn, handleValidationErrors];
   }
@@ -67,7 +67,7 @@ class AdminValidator {
     ];
   }
 
-  static updateAdminValidation() {
+  static updateTeacherValidation() {
     return [
       check('name')
         .optional()
@@ -92,7 +92,7 @@ class AdminValidator {
     ];
   }
 
-  static changeAdminPasswordValidation() {
+  static changeTeacherPasswordValidation() {
     return [
       check('currentPassword')
         .notEmpty()
@@ -116,8 +116,8 @@ class AdminValidator {
   }
 
   static validateEmailDoesNotExist = async (email) => {
-    if (await AdminModel.findOne({ email }))
-      throw new ErrorResponse(i18n.__('adminAlreadyExists'), 400);
+    if (await TeacherModel.findOne({ email }))
+      throw new ErrorResponse(i18n.__('teacherAlreadyExists'), 400);
   };
 
   static validatePasswordLength = (password) => password.length >= 6;
@@ -126,8 +126,8 @@ class AdminValidator {
     passwordConfirm === password;
 
   static validateEmailExists = async (val, { req }) => {
-    req.user = await AdminModel.findOne({ email: val });
-    if (!req.user) throw new ErrorResponse(i18n.__('adminNotFound'), 400);
+    req.user = await TeacherModel.findOne({ email: val });
+    if (!req.user) throw new ErrorResponse(i18n.__('teacherNotFound'), 400);
   };
 
   static validatePassword = async (val, { req }) => {
@@ -139,8 +139,10 @@ class AdminValidator {
   };
 
   static async validateEmailExistsForUpdate(val, { req }) {
-    if (await AdminModel.findOne({ email: val, _id: { $ne: req.user._id } })) {
-      throw new ErrorResponse(i18n.__('adminEmailExists'), 400);
+    if (
+      await TeacherModel.findOne({ email: val, _id: { $ne: req.user._id } })
+    ) {
+      throw new ErrorResponse(i18n.__('teacherEmailExists'), 400);
     }
   }
 
@@ -153,4 +155,4 @@ class AdminValidator {
   }
 }
 
-export { AdminValidator };
+export { TeacherValidator };

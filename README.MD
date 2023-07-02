@@ -12,6 +12,7 @@ The School Management System is a web-based application designed to streamline a
 - **Program Management**: Add, update, and delete programs with validation for program names and their association with class levels.
 - **Subject Management**: Add, update, and delete subjects with validation for subject codes and their association with programs.
 - **YearGroup Management**: Add, update, and delete YearGroups with validation for YearGroup names and their association with class levels.
+- **Teacher Management**: Allow admins to add new teachers and manage their profiles, including association with programs, subjects, class levels, and academic years.
 
 ## Project Structure
 
@@ -22,12 +23,13 @@ The School Management System project is built using object-oriented programming 
 - `src`: Contains the source code of the project.
   - `modules`: Contains modules related to different management functionalities.
     - `admin`: Handles admin authentication and related functionality.
-    - `academic`: Manages academic years, terms, yearGroups, classLevel, programs and subject.
+    - `academic`: Manages academic years, terms, yearGroups, classLevel, programs, and subjects.
     - `staff`: Handles staff management and related operations.
+    - `teacher`: Allows admins to add new teachers and manage their profiles.
   - `middlewares`: Contains middleware functions used throughout the application.
   - `utils`: Contains utility functions used across the project.
   - `app.js`: Entry point of the application.
-  - server.js: File responsible for setting up and starting the server.
+  - `server.js`: File responsible for setting up and starting the server.
 
 ## Getting Started
 

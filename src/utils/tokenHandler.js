@@ -24,8 +24,8 @@ export class TokenResponseHandler {
     const responsePayload = {
       success: true,
       message: i18n.__(message),
-      ...(Array.isArray(users?.data) ? { users } : { user }),
-      ...(user && !Array.isArray(users?.data) ? { token } : {}),
+      ...(Array.isArray(users?.data) ? { users } : data ? {} : { user }),
+      ...(user && !Array.isArray(users?.data) && !data ? { token } : {}),
       ...(data && { data }),
     };
 

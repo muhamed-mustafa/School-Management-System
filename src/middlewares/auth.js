@@ -2,6 +2,7 @@ import jwt from 'jsonwebtoken';
 import asyncHandler from 'express-async-handler';
 import { ErrorResponse } from '@root/utils/errorResponse.js';
 import i18n from 'i18n';
+import { AdminModel } from '@staff/admin/AdminModel.js';
 
 const protect = (Model) =>
   asyncHandler(async (req, _res, next) => {
@@ -16,7 +17,11 @@ const protect = (Model) =>
 
     try {
       const decoded = jwt.verify(token, process.env.JWT_TOKEN);
-      req.user = await Model.findById(decoded.id);
+      console.log(decoded);
+
+      req.user =
+        (await Model.findById(decoded.id)) ??
+        (await AdminModel.findById(decoded.id));
 
       next();
     } catch (err) {
