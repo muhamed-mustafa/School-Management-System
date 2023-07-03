@@ -44,4 +44,4 @@ class Exam {
   }
 }
 
-export default Exam;
+export { Exam };

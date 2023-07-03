@@ -42,6 +42,12 @@ const questionSchema = new Schema(
       ref: 'Teacher',
       required: true,
     },
+
+    exam: {
+      type: Schema.Types.ObjectId,
+      ref: 'Exam',
+      required: true,
+    },
   },
   {
     toJSON: {

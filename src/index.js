@@ -6,6 +6,9 @@ import { ProgramRoutes } from '@academic/program/ProgramRoutes.js';
 import { SubjectRoutes } from '@academic/subjects/SubjectRoutes.js';
 import { YearGroupRoutes } from '@academic/year-group/YearGroupRoutes.js';
 import { TeacherRoutes } from '@staff/teacher/TeacherRoutes.js';
+import { ExamRoutes } from '@academic/exams/ExamRoutes.js';
+import { StudentRoutes } from '@academic/students/StudentRoutes.js';
+import { QuestionRoutes } from '@academic/questions/QuestionRoutes.js';
 
 class RouteManager {
   constructor(app) {
@@ -18,6 +21,9 @@ class RouteManager {
     this.subjectRoutes = new SubjectRoutes();
     this.yearGroupRoutes = new YearGroupRoutes();
     this.teacherRoutes = new TeacherRoutes();
+    this.examRoutes = new ExamRoutes();
+    this.studentRoutes = new StudentRoutes();
+    this.questionRoutes = new QuestionRoutes();
   }
 
   mountRoutes() {
@@ -29,6 +35,9 @@ class RouteManager {
     this.app.use('/api/v1/subject', this.subjectRoutes.router);
     this.app.use('/api/v1/year-group', this.yearGroupRoutes.router);
     this.app.use('/api/v1/teacher', this.teacherRoutes.router);
+    this.app.use('/api/v1/exam', this.examRoutes.router);
+    this.app.use('/api/v1/question', this.questionRoutes.router);
+    this.app.use('/api/v1/student', this.studentRoutes.router);
   }
 }
 

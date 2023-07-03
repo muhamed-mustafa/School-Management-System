@@ -314,5 +314,93 @@
   "yearGroupDeleted": {
     "en": "Year group deleted successfully",
     "ar": "تم حذف مجموعة السنة الدراسية بنجاح"
+  },
+  "examExists": {
+    "en": "Exam already exists",
+    "ar": "الامتحان موجود بالفعل"
+  },
+  "examCreated": {
+    "en": "Exam created successfully",
+    "ar": "تم إنشاء الامتحان بنجاح"
+  },
+  "examsFetched": {
+    "en": "All exams fetched successfully",
+    "ar": "تم استرداد جميع الامتحانات بنجاح"
+  },
+  "examNotFound": {
+    "en": "Exam not found",
+    "ar": "الامتحان غير موجود"
+  },
+  "examFetched": {
+    "en": "Exam fetched successfully",
+    "ar": "تم استرداد الامتحان بنجاح"
+  },
+  "examUpdated": {
+    "en": "Exam updated successfully",
+    "ar": "تم تحديث الامتحان بنجاح"
+  },
+  "examDeleted": {
+    "en": "Exam deleted successfully",
+    "ar": "تم حذف الامتحان بنجاح"
+  },
+  "studentCreated": {
+    "en": "New student created successfully.",
+    "ar": "تم إنشاء طالب جديد بنجاح."
+  },
+  "studentLoggedIn": {
+    "en": "Student logged in successfully.",
+    "ar": "تم تسجيل دخول الطالب بنجاح."
+  },
+  "studentsRetrievedSuccessfully": {
+    "en": "Students retrieved successfully",
+    "ar": "تم استرداد الطلاب بنجاح"
+  },
+  "studentRetrievedSuccessfully": {
+    "en": "Student retrieved successfully",
+    "ar": "تم استرداد الطالب بنجاح"
+  },
+  "studentEmailExists": {
+    "en": "Student with the provided email already exists",
+    "ar": "الطالب بالبريد الإلكتروني المقدم موجود بالفعل"
+  },
+  "studentAlreadyExists": {
+    "en": "Student already exists.",
+    "ar": "الطالب موجود بالفعل."
+  },
+  "studentNotFound": {
+    "en": "Student not found",
+    "ar": "الطالب غير موجود"
+  },
+  "studentIsWithdrawn": {
+    "en": "Action denied, student is withdrawn",
+    "ar": "حسابك موقوف"
+  },
+  "questionExists": {
+    "en": "Question already exists",
+    "ar": "السؤال موجود بالفعل"
+  },
+  "questionCreated": {
+    "en": "Question created successfully",
+    "ar": "تم إنشاء السؤال بنجاح"
+  },
+  "questionsFetched": {
+    "en": "All questions fetched successfully",
+    "ar": "تم استرداد جميع الأسئلة بنجاح"
+  },
+  "questionNotFound": {
+    "en": "Question not found",
+    "ar": "السؤال غير موجود"
+  },
+  "questionFetched": {
+    "en": "Question fetched successfully",
+    "ar": "تم استرداد السؤال بنجاح"
+  },
+  "questionUpdated": {
+    "en": "Question updated successfully",
+    "ar": "تم تحديث السؤال بنجاح"
+  },
+  "questionDeleted": {
+    "en": "Question deleted successfully",
+    "ar": "تم حذف السؤال بنجاح"
   }
 }

@@ -31,8 +31,15 @@ export const advancedResults = (model, populate) => async (req, res, next) => {
     const startIndex = (page - 1) * limit;
     const endIndex = page * limit;
 
+    console.log('req.params.examID', req.params.examID);
+    
     let queryObj = model
-      .find({ ...JSON.parse(queryStr), _id: { $ne: req.user?._id } })
+      .find({
+        ...JSON.parse(queryStr),
+        _id: { $ne: req.user?._id },
+        createdBy: req.user?._id,
+        ...(req.params.examID && { exam: req.params.examID }),
+      })
       .select(fields)
       .sort(sortBy);
 
@@ -65,6 +72,7 @@ export const advancedResults = (model, populate) => async (req, res, next) => {
 
     next();
   } catch (err) {
+    console.log('error', err);
     res.status(500).json({ success: false, error: i18n.__('serverError') });
   }
 };

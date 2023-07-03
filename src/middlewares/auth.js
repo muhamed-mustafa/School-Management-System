@@ -17,7 +17,6 @@ const protect = (Model) =>
 
     try {
       const decoded = jwt.verify(token, process.env.JWT_TOKEN);
-      console.log(decoded);
 
       req.user =
         (await Model.findById(decoded.id)) ??
@@ -38,11 +37,11 @@ const protect = (Model) =>
 
 const authorize = (...roles) => {
   return (req, _res, next) => {
-    if (!roles.includes(req.user.role)) {
+    if (!roles.includes(req.user?.role)) {
       const unauthorizedMessage = i18n.__('unauthorizedRole');
       const replacedMessage = unauthorizedMessage.replace(
         '{{role}}',
-        req.user.role
+        req.user?.role
       );
       return next(new ErrorResponse(replacedMessage, 403));
     }
