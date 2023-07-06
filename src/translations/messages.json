@@ -402,5 +402,33 @@
   "questionDeleted": {
     "en": "Question deleted successfully",
     "ar": "تم حذف السؤال بنجاح"
+  },
+  "suspensionMessage": {
+    "ar": "لقد تم إيقافك/سحبك، لا يمكنك أداء هذا الامتحان",
+    "en": "You are suspended/withdrawn, you can't take this exam"
+  },
+  "submissionMessage": {
+    "ar": "لقد قمت بتقديم امتحانك. تحقق في وقت لاحق للحصول على النتائج",
+    "en": "You have submitted your exam. Check later for the results"
+  },
+  "examResultNotAvailable": {
+    "en": "Exam result is not available, check out later",
+    "ar": "نتيجة الامتحان غير متوفرة، يرجى التحقق لاحقًا"
+  },
+  "examResult": {
+    "en": "Exam result",
+    "ar": "نتيجة الامتحان"
+  },
+  "examResultAll": {
+    "en": "Exam Results",
+    "ar": "نتائج الامتحان"
+  },
+  "examResultNotFound": {
+    "en": "Exam result not found",
+    "ar": "نتيجة الامتحان غير موجودة"
+  },
+  "examResultsUpdated": {
+    "en": "Exam Results Updated",
+    "ar": "تم تحديث نتائج الامتحان"
   }
 }

@@ -66,6 +66,13 @@ class StudentRoutes {
       authorize('admin'),
       StudentController.updateStudentProfileByAdmin
     );
+
+    this.router.post(
+      '/exam/:examID/write',
+      protect(StudentModel),
+      authorize('student'),
+      StudentController.writeExam
+    );
   }
 }
 

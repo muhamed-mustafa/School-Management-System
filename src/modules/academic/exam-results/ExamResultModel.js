@@ -3,8 +3,7 @@ import { Schema, model } from 'mongoose';
 const examResultSchema = new Schema(
   {
     student: {
-      type: Schema.Types.ObjectId,
-      ref: 'Student',
+      type: String,
       required: true,
     },
 
@@ -24,6 +23,8 @@ const examResultSchema = new Schema(
       required: true,
     },
 
+    answeredQuestions: [{ type: Object }],
+
     passMark: {
       type: Number,
       required: true,
@@ -33,25 +34,15 @@ const examResultSchema = new Schema(
     status: {
       type: String,
       required: true,
-      enum: ['failed', 'passed'],
-      default: 'failed',
+      enum: ['Pass', 'Fail'],
+      default: 'Fail',
     },
 
     remarks: {
       type: String,
       required: true,
-      enum: ['Excellent', 'Good', 'Poor'],
+      enum: ['Excellent', 'Good', 'Poor', 'Fair'],
       default: 'Poor',
-    },
-
-    position: {
-      type: Number,
-      required: true,
-    },
-
-    subject: {
-      type: Schema.Types.ObjectId,
-      ref: 'Subject',
     },
 
     classLevel: {

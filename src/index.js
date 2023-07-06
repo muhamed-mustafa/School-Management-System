@@ -9,6 +9,7 @@ import { TeacherRoutes } from '@staff/teacher/TeacherRoutes.js';
 import { ExamRoutes } from '@academic/exams/ExamRoutes.js';
 import { StudentRoutes } from '@academic/students/StudentRoutes.js';
 import { QuestionRoutes } from '@academic/questions/QuestionRoutes.js';
+import { ExamResultsRoutes } from '@academic/exam-results/ExamResultRoutes.js';
 
 class RouteManager {
   constructor(app) {
@@ -24,6 +25,7 @@ class RouteManager {
     this.examRoutes = new ExamRoutes();
     this.studentRoutes = new StudentRoutes();
     this.questionRoutes = new QuestionRoutes();
+    this.examResultsRoutes = new ExamResultsRoutes();
   }
 
   mountRoutes() {
@@ -38,6 +40,7 @@ class RouteManager {
     this.app.use('/api/v1/exam', this.examRoutes.router);
     this.app.use('/api/v1/question', this.questionRoutes.router);
     this.app.use('/api/v1/student', this.studentRoutes.router);
+    this.app.use('/api/v1/exam-result', this.examResultsRoutes.router);
   }
 }
 

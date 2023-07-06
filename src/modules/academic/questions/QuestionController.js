@@ -58,6 +58,7 @@ class QuestionController {
   static getQuestion = asyncHandler(async (req, res) => {
     const { id } = req.params;
     const question = await QuestionController.checkQuestionIfNotExist(id);
+    console.log('question', question);
 
     await TokenResponseHandler.sendTokenResponse({
       data: question,

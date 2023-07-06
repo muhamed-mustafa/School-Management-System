@@ -89,6 +89,8 @@ class StudentSchema extends UserSchema {
         prefectName: {
           type: String,
         },
+
+        yearGraduated: { type: Date },
       },
       {
         toJSON: {

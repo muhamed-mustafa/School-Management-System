@@ -10,25 +10,15 @@ class Question {
   }
 
   static async findById(id, options = {}) {
-    const findByIdQuery = QuestionModel.findById(id, null, options);
-    Question.applyPopulation(findByIdQuery, options.populate);
-    return findByIdQuery.exec();
+    return QuestionModel.findById(id).populate(options.populate).exec();
   }
 
-  static async find(query = {}, options = {}) {
-    const findQuery = QuestionModel.find(query, null, options);
-    Question.applyPopulation(findQuery, options.populate);
-    return findQuery.exec();
+  static async findById(id, options = {}) {
+    return QuestionModel.findById(id).populate(options.populate).exec();
   }
 
   static async findOne(query = {}, options = {}) {
-    const findOneQuery = QuestionModel.findOne(query, null, options);
-    Question.applyPopulation(findOneQuery, options.populate);
-    return findOneQuery.exec();
-  }
-
-  static applyPopulation(query, populate) {
-    return populate ? query.populate(populate) : query;
+    return QuestionModel.findOne(query).populate(options.populate);
   }
 
   static async updateOne(filter, update, options = {}) {

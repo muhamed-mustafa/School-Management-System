@@ -10,25 +10,31 @@ class ExamResult {
   }
 
   static async findById(id, options = {}) {
-    const findByIdQuery = ExamResultModel.findById(id, null, options);
-    ExamResult.applyPopulation(findByIdQuery, options.populate);
+    let findByIdQuery = ExamResultModel.findById(id);
+
+    if (options.populate && Array.isArray(options.populate)) {
+      findByIdQuery = options.populate.reduce((query, field) => {
+        return query.populate(field);
+      }, findByIdQuery);
+    }
+
     return findByIdQuery.exec();
   }
 
   static async find(query = {}, options = {}) {
-    const findQuery = ExamResultModel.find(query, null, options);
-    ExamResult.applyPopulation(findQuery, options.populate);
-    return findQuery.exec();
+    return ExamResultModel.find(query).populate(options.populate).exec();
   }
 
-  static async findOne(query = {}, options = {}) {
-    const findOneQuery = ExamResultModel.findOne(query, null, options);
-    ExamResult.applyPopulation(findOneQuery, options.populate);
+  static async findOne(id, options = {}) {
+    let findOneQuery = ExamResultModel.findById(id);
+
+    if (options.populate && Array.isArray(options.populate)) {
+      findOneQuery = options.populate.reduce((query, field) => {
+        return query.populate(field);
+      }, findOneQuery);
+    }
+
     return findOneQuery.exec();
-  }
-
-  static applyPopulation(query, populate) {
-    return populate ? query.populate(populate) : query;
   }
 
   static async updateOne(filter, update, options = {}) {
@@ -44,4 +50,4 @@ class ExamResult {
   }
 }
 
-export default ExamResult;
+export { ExamResult };

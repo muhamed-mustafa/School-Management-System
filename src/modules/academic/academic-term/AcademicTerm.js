@@ -10,21 +10,15 @@ class AcademicTerm {
   }
 
   static async findById(id, options = {}) {
-    const findByIdQuery = AcademicTermModel.findById(id, null, options);
-    AcademicTerm.applyPopulation(findByIdQuery, options.populate);
-    return findByIdQuery.exec();
+    return AcademicTermModel.findById(id).populate(options.populate).exec();
   }
 
   static async find(query = {}, options = {}) {
-    const findQuery = AcademicTermModel.find(query, null, options);
-    AcademicTerm.applyPopulation(findQuery, options.populate);
-    return findQuery.exec();
+    return AcademicTermModel.find(query).populate(options.populate).exec();
   }
 
   static async findOne(query = {}, options = {}) {
-    const findOneQuery = AcademicTermModel.findOne(query, null, options);
-    AcademicTerm.applyPopulation(findOneQuery, options.populate);
-    return findOneQuery.exec();
+    return AcademicTermModel.findOne(query).populate(options.populate).exec();
   }
 
   static async updateOne(filter, update, options = {}) {
@@ -37,10 +31,6 @@ class AcademicTerm {
 
   static async deleteAll(filter = {}, options = {}) {
     return AcademicTermModel.deleteMany(filter, options);
-  }
-
-  static applyPopulation(query, populate) {
-    return populate ? query.populate(populate) : query;
   }
 }
 

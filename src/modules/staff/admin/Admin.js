@@ -10,21 +10,15 @@ class Admin {
   }
 
   static async findById(id, options = {}) {
-    const findByIdQuery = AdminModel.findById(id, null, options);
-    Admin.applyPopulation(findByIdQuery, options.populate);
-    return findByIdQuery.exec();
+    return AdminModel.findById(id).populate(options.populate).exec();
   }
 
   static async find(query = {}, options = {}) {
-    const findQuery = AdminModel.find(query, null, options);
-    Admin.applyPopulation(findQuery, options.populate);
-    return findQuery.exec();
+    return AdminModel.find(query).populate(options.populate).exec();
   }
 
   static async findOne(query = {}, options = {}) {
-    const findOneQuery = AdminModel.findOne(query, null, options);
-    Admin.applyPopulation(findOneQuery, options.populate);
-    return findOneQuery.exec();
+    return AdminModel.findOne(query).populate(options.populate).exec();
   }
 
   static async updateOne(filter, update, options = {}) {
@@ -37,10 +31,6 @@ class Admin {
 
   static async deleteAll(filter = {}, options = {}) {
     return AdminModel.deleteMany(filter, options);
-  }
-
-  static applyPopulation(query, populate) {
-    return populate ? query.populate(populate) : query;
   }
 }
 

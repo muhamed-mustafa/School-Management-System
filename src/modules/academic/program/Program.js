@@ -10,25 +10,17 @@ class Program {
   }
 
   static async findById(id, options = {}) {
-    const findByIdQuery = ProgramModel.findById(id, null, options);
-    Program.applyPopulation(findByIdQuery, options.populate);
-    return findByIdQuery.exec();
+    return ProgramModel.findById(id).populate(options.populate).exec();
   }
 
   static async find(query = {}, options = {}) {
-    const findQuery = ProgramModel.find(query, null, options);
-    Program.applyPopulation(findQuery, options.populate);
-    return findQuery.exec();
+    ProgramModel.find(query).populate(options.populate).exec();
   }
 
   static async findOne(query = {}, options = {}) {
-    const findOneQuery = ProgramModel.findOne(query, null, options);
-    Program.applyPopulation(findOneQuery, options.populate);
-    return findOneQuery.exec();
-  }
-
-  static applyPopulation(query, populate) {
-    return populate ? query.populate(populate) : query;
+    return ProgramModel.findOne(query, options)
+      .populate(options.populate)
+      .exec();
   }
 
   static async updateOne(filter, update, options = {}) {

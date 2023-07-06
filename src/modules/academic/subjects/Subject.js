@@ -10,25 +10,15 @@ class Subject {
   }
 
   static async findById(id, options = {}) {
-    const findByIdQuery = SubjectModel.findById(id, null, options);
-    Subject.applyPopulation(findByIdQuery, options.populate);
-    return findByIdQuery.exec();
+    return SubjectModel.findById(id).populate(options.populate).exec();
   }
 
   static async find(query = {}, options = {}) {
-    const findQuery = SubjectModel.find(query, null, options);
-    Subject.applyPopulation(findQuery, options.populate);
-    return findQuery.exec();
+    return SubjectModel.find(query, options).populate(options.populate).exec();
   }
 
   static async findOne(query = {}, options = {}) {
-    const findOneQuery = SubjectModel.findOne(query, null, options);
-    Subject.applyPopulation(findOneQuery, options.populate);
-    return findOneQuery.exec();
-  }
-
-  static applyPopulation(query, populate) {
-    return populate ? query.populate(populate) : query;
+    return SubjectModel.findOne(query).populate(options.populate).exec();
   }
 
   static async updateOne(filter, update, options = {}) {

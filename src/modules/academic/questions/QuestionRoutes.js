@@ -28,7 +28,7 @@ class QuestionRoutes {
     );
 
     this.router.get(
-      '/:id',
+      '/examID/:id',
       protect(TeacherModel),
       authorize('teacher'),
       QuestionController.getQuestion

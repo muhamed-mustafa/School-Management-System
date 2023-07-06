@@ -10,21 +10,15 @@ class YearGroup {
   }
 
   static async findById(id, options = {}) {
-    const findByIdQuery = YearGroupModel.findById(id, null, options);
-    YearGroup.applyPopulation(findByIdQuery, options.populate);
-    return findByIdQuery.exec();
+    return YearGroupModel.findById(id).populate(options.populate).exec();
   }
 
   static async find(query = {}, options = {}) {
-    const findQuery = YearGroupModel.find(query, null, options);
-    YearGroup.applyPopulation(findQuery, options.populate);
-    return findQuery.exec();
+    return YearGroupModel.find(query).populate(options.populate).exec();
   }
 
   static async findOne(query = {}, options = {}) {
-    const findOneQuery = YearGroupModel.findOne(query, null, options);
-    YearGroup.applyPopulation(findOneQuery, options.populate);
-    return findOneQuery.exec();
+    return YearGroupModel.findOne(query).populate(options.populate).exec();
   }
 
   static async updateOne(filter, update, options = {}) {
@@ -37,10 +31,6 @@ class YearGroup {
 
   static async deleteAll(filter = {}, options = {}) {
     return YearGroupModel.deleteMany(filter, options);
-  }
-
-  static applyPopulation(query, populate) {
-    return populate ? query.populate(populate) : query;
   }
 }
 

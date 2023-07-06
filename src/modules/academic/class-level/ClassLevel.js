@@ -10,25 +10,17 @@ class ClassLevel {
   }
 
   static async findById(id, options = {}) {
-    const findByIdQuery = ClassLevelModel.findById(id, null, options);
-    ClassLevel.applyPopulation(findByIdQuery, options.populate);
-    return findByIdQuery.exec();
+    return ClassLevelModel.findById(id).populate(options.populate).exec();
   }
 
   static async find(query = {}, options = {}) {
-    const findQuery = ClassLevelModel.find(query, null, options);
-    ClassLevel.applyPopulation(findQuery, options.populate);
-    return findQuery.exec();
+    return ClassLevelModel.find(query).populate(options.populate).exec();
   }
 
   static async findOne(query = {}, options = {}) {
-    const findOneQuery = ClassLevelModel.findOne(query, null, options);
-    ClassLevel.applyPopulation(findOneQuery, options.populate);
-    return findOneQuery.exec();
-  }
-
-  static applyPopulation(query, populate) {
-    return populate ? query.populate(populate) : query;
+    return ClassLevelModel.findOne(query, options)
+      .populate(options.populate)
+      .exec();
   }
 
   static async updateOne(filter, update, options = {}) {

@@ -34,10 +34,15 @@ The School Management System project is built using object-oriented programming 
     - `exam`: Handles exam management, including creating, retrieving, updating, and deleting exams.
     - `question`: Manages questions, including creating, retrieving, updating, and deleting questions.
     - `student`: Handles student management, including student creation, profile management, and authentication.
+    - `ExamResult`: Allow teachers to evaluate student exams, record exam results, and provide feedback to students.
+    - `Student Promotion`: Automatically promote students to the next class level based on exam results and academic terms.
+    - `ExamResultChecking`: Allow students to view their exam results and performance feedback.
   - `middlewares`: Contains middleware functions used throughout the application.
   - `utils`: Contains utility functions used across the project.
   - `app.js`: Entry point of the application.
   - `server.js`: File responsible for setting up and starting the server.
+
+
 
 ## Getting Started
 

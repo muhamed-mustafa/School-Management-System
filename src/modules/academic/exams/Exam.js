@@ -10,25 +10,23 @@ class Exam {
   }
 
   static async findById(id, options = {}) {
-    const findByIdQuery = ExamModel.findById(id, null, options);
-    Exam.applyPopulation(findByIdQuery, options.populate);
+    let findByIdQuery = ExamModel.findById(id);
+
+    if (options.populate && Array.isArray(options.populate)) {
+      findByIdQuery = options.populate.reduce((query, field) => {
+        return query.populate(field);
+      }, findByIdQuery);
+    }
+
     return findByIdQuery.exec();
   }
 
   static async find(query = {}, options = {}) {
-    const findQuery = ExamModel.find(query, null, options);
-    Exam.applyPopulation(findQuery, options.populate);
-    return findQuery.exec();
+    return ExamModel.find(query).populate(options.populate).exec();
   }
 
   static async findOne(query = {}, options = {}) {
-    const findOneQuery = ExamModel.findOne(query, null, options);
-    Exam.applyPopulation(findOneQuery, options.populate);
-    return findOneQuery.exec();
-  }
-
-  static applyPopulation(query, populate) {
-    return populate ? query.populate(populate) : query;
+    return ExamModel.findOne(query).populate(options.populate).exec();
   }
 
   static async updateOne(filter, update, options = {}) {

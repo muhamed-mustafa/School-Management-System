@@ -30,8 +30,6 @@ export const advancedResults = (model, populate) => async (req, res, next) => {
 
     const startIndex = (page - 1) * limit;
     const endIndex = page * limit;
-
-    console.log('req.params.examID', req.params.examID);
     
     let queryObj = model
       .find({

@@ -10,21 +10,15 @@ class Teacher {
   }
 
   static async findById(id, options = {}) {
-    const findByIdQuery = TeacherModel.findById(id, null, options);
-    Teacher.applyPopulation(findByIdQuery, options.populate);
-    return findByIdQuery.exec();
+    return TeacherModel.findById(id, options).populate(options.populate).exec();
   }
 
-  static async find(query = {}, options = {}) {
-    const findQuery = TeacherModel.find(query, null, options);
-    Teacher.applyPopulation(findQuery, options.populate);
-    return findQuery.exec();
+  static async findById(id, options = {}) {
+    return TeacherModel.findById(id).populate(options.populate).exec();
   }
 
   static async findOne(query = {}, options = {}) {
-    const findOneQuery = TeacherModel.findOne(query, null, options);
-    Teacher.applyPopulation(findOneQuery, options.populate);
-    return findOneQuery.exec();
+    return TeacherModel.findOne(query).populate(options.populate).exec();
   }
 
   static async updateOne(filter, update, options = {}) {
@@ -37,10 +31,6 @@ class Teacher {
 
   static async deleteAll(filter = {}, options = {}) {
     return TeacherModel.deleteMany(filter, options);
-  }
-
-  static applyPopulation(query, populate) {
-    return populate ? query.populate(populate) : query;
   }
 }
 

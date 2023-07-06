@@ -52,9 +52,7 @@ class YearGroupController {
 
   static getYearGroup = asyncHandler(async (req, res) => {
     const { id } = req.params;
-    const yearGroup = await YearGroupController.checkYearGroupIfNotExist(
-      id
-    );
+    const yearGroup = await YearGroupController.checkYearGroupIfNotExist(id);
 
     await TokenResponseHandler.sendTokenResponse({
       data: yearGroup,

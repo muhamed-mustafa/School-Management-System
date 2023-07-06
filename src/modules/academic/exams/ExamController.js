@@ -86,7 +86,7 @@ class ExamController {
     const { id } = req.params;
 
     await ExamController.checkExamIfNotExist(id);
-    
+
     await Promise.all([
       Exam.deleteOne({ _id: id }),
       Teacher.updateOne(
